@@ -15,8 +15,9 @@ export default class RichVideo extends Component {
 
   render () {
     const { attrs, nodes } = this.props
+
     return (
-      <Video className={attrs.class} style={attrs.style} src={attrs.src}></Video>
+      <Video className={attrs.className} style={attrs.style} src={attrs.src}></Video>
     )
   }
 }

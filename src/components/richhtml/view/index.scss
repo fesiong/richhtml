@@ -1,23 +1,28 @@
+$primary: #266AAE;
+$background: #f6f6f6;
+
 .rich-p {
   margin-bottom: 20px;
   word-break: break-all;
 }
-.rich-text,.rich-abbr,.rich-del,.rich-em,.rich-font,.rich-i,.rich-label,.rich-span,.rich-strike,.rich-strong,.sub,.rich-sup,.rich-u{
+.rich-text,.rich-abbr,.rich-del,.rich-em,.rich-font,.rich-i,.rich-label,.rich-span,.rich-strike,.rich-strong,.rich-sub,.rich-sup,.rich-u,.rich-b, .rich-a{
   display: inline;
 }
 /* pre */
 .rich-pre,.rich-code {
   font-size: 28px;
   margin-top: 20px;
+  margin-bottom: 20px;
   padding: 10px;
-  background: #eee;
+  background: $background;
   white-space: pre-wrap; 
   word-break: break-all;
+  border-left: 2px solid #3273dc;
 }
 /* 图片 */
 .rich-img {
   max-width: 100% !important;
-  height: auto !important;
+  // height: auto !important;
 }
 /* 视频 */
 .rich-video {
@@ -25,23 +30,41 @@
 }
 /* 超链接 */
 .rich-a {
-  color: #29c;
+  color: $primary;
 }
 /* 表格 */
 .rich-table {
-  table-layout: fixed; border-collapse: collapse; width: auto !important; display: table;
+  table-layout: fixed; border-collapse: collapse;  display: table;
 }
 .rich-tbody{
   display: table-row-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+.rich-head{
+  display: table-header-group;
+  vertical-align: middle;
+  border-color: inherit;
+}
+.rich-foot{
+  display: table-footer-group;
+  vertical-align: middle;
+  border-color: inherit;
 }
 .rich-td,.rich-th {
-  display: table-cell; vertical-align: middle; padding:5px 10px; font-size:28px; border: 1px solid #ccc; word-break: break-all;
+  display: table-cell; vertical-align: inherit; padding:5px 10px; font-size:28px; border: 1px solid #e0e0e0; word-break: break-all;
 }
 .rich-th {
-  background:#eee;
+  background:$background;
+  vertical-align: inherit;
+  font-weight: bold;
+  text-align: center;
+  text-align: -internal-center;
 }
 .rich-tr{
   display: table-row;
+  vertical-align: inherit;
+  border-color: inherit;
 }
 .rich-h1,.rich-h2,.rich-h3,.rich-h4,.rich-h5,.rich-h6 {
     display: block;
@@ -70,9 +93,9 @@
 .rich-blockquote {
     margin-bottom: 20px;
     padding: 20px;
-    border-left: 10px solid #29c;
+    border-left: 10px solid $primary;
     border-radius: 0 4px 4px 0;
-    background-color: #eee;
+    background-color: $background;
 }
 .rich-ul,.rich-ol {
   list-style-type: disc;
