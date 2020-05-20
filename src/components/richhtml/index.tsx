@@ -28,8 +28,8 @@ export default class SeoRichHtml extends Component {
   }
 
   componentWillReceiveProps(nextProps) {
-    if (nextProps.componentData) {
-      let nodes = html2Json(nextProps.componentData.content)
+    if (nextProps.content != this.props.content) {
+      let nodes = html2Json(nextProps.content)
       this.setState({
         nodes: nodes
       })
